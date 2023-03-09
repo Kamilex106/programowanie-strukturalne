@@ -3,99 +3,98 @@
 #include <math.h>
 int main()
 {
-//    int n,m,k;
-//    scanf("%d %d %d", &n, &m, &k);
-//    int i;
-//    for(i=1;i<=m;i++)
-//    {
-//        printf("%d ",n*i);
+//    int a,b,c,d,e,f;
+//    int W,Wx,Wy;
+//    float x,y;
+//    scanf("%d %d %d %d %d %d", &a, &b, &c, &d, &e, &f);
+//    printf("Zdefiniowales uklad rownan \n%d*x+%d*y-%d\n %d*x+%d*y-%d\n",a,b,c,d,e,f);
+//    W=a*e-b*d;
+//    Wx=c*e-b*f;
+//    Wy=a*f-c*d;
+//    if(W!=0) {
+//        x=(float)(Wx/W);
+//        y=(float)(Wy/W);
+//        printf("Rozwiazaniem ukladu rownan jest x=%f,y=%f",x,y);
 //    }
-//    for(i=m/n*n+n;i<k;i=i+n) //<- 2 sposoby
-//    {
-//        printf("%d ",i);
+//    else if(Wx==0&&Wy==0) {
+//        printf("uklad nieoznaczony");
+//    }
+//    else{
+//        printf("uklad sprzeczny");
 //    }
 
-//    int n;
-//    scanf("%d",&n);
-//    int s=1;
-//    int i;
-//    for(i=2;i<=n;i++)
-//    {
-//        s=s*i;
-//    }
-//    printf("%d!=%d",n,s);
+    int a,b,c,d;
+    float x1,x2;
 
-
-//zad5 -1
-//    int n;
-//    int s=0;
-//    int i;
-//    scanf("%d",&n);
-//    for (i=1;i<=n;i++)
-//    {
-//        s+=i*i;
-//    }
-//    printf("0^2+1^2+...+%d^2=%d",n,s);
-
-//zad5 -2
-//    int k;
-//    int s=0;
-//    int i=1;
-//    scanf("%d",&k);
-//    while(s<k)
-//    {
-//        i=i+1;
-//        s=s+i*i;
-//
-//    }
-//    printf("0^2+1^2+...+%d^2=%d",i-1,s-i*i);
-
-
-//    int n;
-//    scanf("%d",&n);
-//    int s=1;
-//    int i;
-//    for(i=2;i<=n;i=i+2)
-//    {
-//        s=s*i;
-//    }
-//    printf("%d",s);
-
-//    int n;
-//    int pierwsza,druga,temp;
-//    pierwsza=1;
-//    druga=1;
-//    scanf("%d",&n);
-//    int i;
-//    for(i=1;i<=n;i++)
-//    {
-//        temp=pierwsza;
-//        pierwsza=druga;
-//        druga=druga+temp;
-//    }
-//    printf("F_%d=%d",n,temp);
-
-    int n;
-    int pierwsza,druga,temp;
-    pierwsza=0;
-    druga=0;
-    scanf("%d %d",&pierwsza,&druga);
-    int i;
-    for(i=1;i<=n;i++)
+    scanf("%d %d %d", &a, &b, &c);
+    if(a==1)
     {
-        if (pierwsza>druga)
-        {
-            pierwsza = pierwsza%druga;
-        }
-        else
-        {
-            druga = druga%pierwsza;
-        }
-        if (pierwsza > druga)
-        {
-            temp=druga;
-        }
+        print("x^2");
     }
-    printf("%d",temp);
+    else i(a==-1)
+    {
+        printf("-x^2");
+    }
+    else{
+        printf("%d*x^2");
+    }
+    else{
+        printf("%d*x^2");
+    }
+    if(b==1)
+    {
+        print("+x");
+    }
+    else if(b==-1)
+    {
+        printf("-x");
+    }
+    else if (b>0){
+        printf("+%d*x",b);
+    }
+    else if (b<0){
+        printf("%d*x",b);
+    }
+
+
+
+    if (a>0 && b>0 && c>0) {
+        if (a!=1 && b!=1 && c!=1) {
+            printf("Zdefiniowales rownanie \n%d*x^2+%d*x+%d=0\n",a,b,c);
+        }
+        if (a=1)
+    }
+
+    d=b*b-4*a*c;
+    if (d>0)
+    {
+        x1=(-b-sqrt(d))/(2*a);
+        x2=(-b+sqrt(d))/(2*a);
+        printf("Rozwiazaniem rownania sa x1=%f, x2=%f",x1,x2);
+    }
+    else if (d=0)
+    {
+        x1=(-b)/(2*a);
+        printf("Rozwiazaniem rownania sa x1=%f",x1);
+    }
+    else{
+        printf("Brak rozwiazan");
+    }
+
+
+
+
+
+
+
+
+
+
+
     return 0;
 }
+
+
+
+//uklad 3 rownan z 3 niewiadomymi PD
+//regula sarrusqa (12)) rozpisac
