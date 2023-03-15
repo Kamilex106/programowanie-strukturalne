@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    float a[3][3], b[3], det, x[3];
+    int i, j;
+
+    printf("Podaj wspolczynniki rownan:\n");
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%f", &a[i][j]);
+        }
+    }
+
+    printf("Podaj wyrazy wolne:\n");
+
+    for (i = 0; i < 3; i++) {
+        scanf("%f", &b[i]);
+    }
+
+    det = a[0][0] * a[1][1] * a[2][2] + a[1][0] * a[2][1] * a[0][2] + a[2][0] * a[0][1] * a[1][2] - a[0][2] * a[1][1] * a[2][0] - a[1][2] * a[2][1] * a[0][0] - a[2][2] * a[0][1] * a[1][0];
+
+    if (det != 0) {
+        float det_x1 = b[0] * a[1][1] * a[2][2] + b[1] * a[2][1] * a[0][2] + b[2] * a[0][1] * a[1][2] - a[0][2] * a[1][1] * b[2] - a[1][2] * b[1] * a[2][0] - a[2][2] * b[0] * a[0][1];
+        float det_x2 = a[0][0] * b[1] * a[2][2] + a[1][0] * b[2] * a[0][2] + a[2][0] * b[0] * a[1][2] - a[0][2] * b[1] * a[2][0] - b[2] * a[1][1] * a[0][0] - a[2][2] * b[0] * a[1][0];
+        float det_x3 = a[0][0] * a[1][1] * b[2] + a[1][0] * b[1] * a[2][2] + b[0] * a[0][1] * a[2][2] - a[0][2] * a[1][1] * b[0] - a[1][2] * a[2][1] * b[1] - b[2] * a[0][1] * a[1][0];
+
+        x[0] = det_x1 / det;
+        x[1] = det_x2 / det;
+        x[2] = det_x3 / det;
+
+        printf("\nRozwiazanie:\n");
+        for (i = 0; i < 3; i++) {
+            printf("x%d = %f\n", i + 1, x[i]);
+        }
+    } else {
+        printf("\nUklad row
